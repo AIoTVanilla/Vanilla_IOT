@@ -33,12 +33,12 @@ if __name__ == '__main__':
     try:
         while True:
             distance_value = getDistance()
-            if distance_value > 2 and distance_value < 50:
+            if distance_value > 2 and distance_value < 35:
                 print("Distance is %.2f cm" %distance_value)
                 GPIO.output(LED_R, GPIO.HIGH)
                 GPIO.output(LED_B, GPIO.LOW)
             else:
-                print("Out of Range")
+                print("Out of Range %.2f cm" %distance_value)
                 GPIO.output(LED_B, GPIO.HIGH)
                 GPIO.output(LED_R, GPIO.LOW)
                 
